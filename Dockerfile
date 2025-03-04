@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-# Install FFmpeg
+# Install FFmpeg dan dependencies sistem
 RUN apk add --no-cache ffmpeg
 
 WORKDIR /app
@@ -8,4 +8,9 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-CMD ["npm", "run", "build"]
+# Build aplikasi Next.js
+RUN npm run build
+
+# Expose port dan jalankan server
+EXPOSE 3000
+CMD ["npm", "start"]
