@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-# Install FFmpeg
+# Install FFmpeg dan dependencies
 RUN apk add --no-cache ffmpeg
 
 WORKDIR /app
@@ -11,5 +11,5 @@ COPY . .
 # Build Next.js
 RUN npm run build
 
-# Start Server
+# Start Production Server
 CMD ["npm", "start"]
