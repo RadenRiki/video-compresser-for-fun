@@ -1,14 +1,8 @@
 {
-    "build": {
-      "docker": {
-        "enabled": true
-      }
-    },
     "functions": {
       "pages/api/compress.js": {
         "memory": 3008,
-        "maxDuration": 300,
-        "includeFiles": "tmp/**"
+        "maxDuration": 300
       }
     },
     "headers": [
