@@ -1,4 +1,9 @@
 {
+    "build": {
+      "docker": {
+        "enabled": true
+      }
+    },
     "functions": {
       "pages/api/compress.js": {
         "memory": 3008,
